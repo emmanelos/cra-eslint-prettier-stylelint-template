@@ -1,0 +1,22 @@
+$breakpoints: (
+  ms: 20em,
+  mm: 23.4375em,
+  ml: 26.5625em,
+  t: 48em,
+  ls: 64em,
+  lm: 80em,
+  ll: 90em,
+  xl: 160em,
+);
+
+@mixin from($bp) {
+  @if map-has-key($breakpoints, $bp) {
+    @media screen and (min-width: map_get($breakpoints, $bp)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $bp) {
+      @content;
+    }
+  }
+}

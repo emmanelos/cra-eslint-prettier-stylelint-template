@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Generic */
+@use 'generic/normalize';
+@use 'generic/box-sizing';
+@use 'generic/fonts';
+@use 'generic/google-recaptcha';
+
+/* Elements */
+@use 'elements/root';
+@use 'elements/body';
+@use 'elements/heading';
+@use 'elements/img';
+@use 'elements/link';
+@use 'elements/input';
+@use 'elements/paragraph';
+
+/* Objects */
+@use 'objects/container';
+
+/* Mixins */
+@use 'tools/mixins';

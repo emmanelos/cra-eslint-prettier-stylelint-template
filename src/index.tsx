@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter } from 'react-router-dom';
+import './styles/index.scss';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import Loader from './atoms/loader/Loader';
+
+const App = lazy(() => import('./App'));
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<BrowserRouter>
+		<Suspense fallback={<Loader />}>
+			<App />
+		</Suspense>
+	</BrowserRouter>,
+	document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change

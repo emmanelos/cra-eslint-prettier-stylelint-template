@@ -1,0 +1,40 @@
+/* stylelint-disable scss/dollar-variable-empty-line-before */
+/* stylelint-disable scss/dollar-variable-pattern */
+$_white: #ffffff;
+$_seashell: #f1f1f1;
+$_concrete: #f2f2f2;
+$_alabaster: #fafafa;
+$_silver: #bfbfbf;
+$_mercury: #e8e8e8;
+$_dusty-gray: #9b9b9b;
+$_emperor: #525252;
+$_dove-gray: #707070;
+$_dove-gray-dark: #656565;
+$_cod-gray: #1c1c1c;
+$_black: #000000;
+$_punch: #dc3545;
+
+$primary-color: $_cod-gray;
+
+$lighter-color: $_white;
+$darker-color: $_black;
+
+$background-color: $_concrete;
+$background-light-color: $_white;
+$background-dark-color: $_black;
+$item-background-color: $_mercury;
+
+$title-color: $_cod-gray;
+$subtitle-color: $_emperor;
+$text-color: $_cod-gray;
+$text-muted-color: $_dusty-gray;
+$text-inverted-color: $_white;
+
+$border-color: $_silver;
+$button-color: $_black;
+$menu-color: $_dove-gray-dark;
+$logo-color: $_dove-gray;
+
+$pagination-color: $_seashell;
+
+$error-color: $_punch;
