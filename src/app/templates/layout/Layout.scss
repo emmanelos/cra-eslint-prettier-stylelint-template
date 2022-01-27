@@ -1,0 +1,19 @@
+@use '../../../styles/settings/variables';
+
+.grid {
+	display: grid;
+	min-height: 100vh;
+	grid-template: auto auto 1fr / 1fr;
+	grid-template-areas:
+		'grid-header'
+		'grid-page'
+		'grid-footer';
+}
+
+.header {
+	grid-area: grid-header;
+}
+
+.footer {
+	grid-area: grid-footer;
+}
