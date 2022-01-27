@@ -1,16 +1,15 @@
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import './styles/index.scss';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import Loader from './atoms/loader/Loader';
+import LoaderContainer from './app/atoms/loader/LoaderContainer';
 
-const App = lazy(() => import('./App'));
+const App = lazy(() => import('./app/App'));
 
 ReactDOM.render(
 	<BrowserRouter>
-		<Suspense fallback={<Loader />}>
+		<Suspense fallback={<LoaderContainer />}>
 			<App />
 		</Suspense>
 	</BrowserRouter>,
