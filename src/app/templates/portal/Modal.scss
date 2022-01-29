@@ -1,0 +1,28 @@
+@use '../../../styles/settings/variables';
+@use '../../../styles/tools/mixins';
+
+.portal {
+	position: fixed;
+	z-index: variables.$zIndex-2--blockGroupFocused;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(0 0 0 / 40%);
+}
+
+.modal {
+	z-index: variables.$zIndex-5--figureOverlay;
+	display: flex;
+	width: 75%;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2em;
+	background-color: variables.$lighter-color;
+	gap: 1em;
+	pointer-events: auto;
+}

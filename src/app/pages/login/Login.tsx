@@ -1,15 +1,28 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Modal from '../../templates/portal/Modal';
-function Login() {
-	return (
-		<section className="login">
-			<Link to="/home">Home</Link>
+import ModalContainer from '../../templates/portal/ModalContainer';
 
-			<Modal id="portal">
-				<p>Thinking with portals</p>
-			</Modal>
+const Login = () => {
+	const [modal, setModal] = useState(false);
+
+	const handlePortal = () => {
+		if (modal) {
+			setModal(!modal);
+		}
+	};
+
+	const handleModal = () => {
+		setModal(!modal);
+	};
+
+	return (
+		<section className="login page">
+			<Link to="/home">Home</Link>
+			<button onClick={handleModal}>Open modal</button>
+
+			{modal && <ModalContainer modal={modal} id="portal" />}
 		</section>
 	);
-}
+};
 
 export default Login;
