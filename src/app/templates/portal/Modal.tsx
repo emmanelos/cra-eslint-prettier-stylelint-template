@@ -1,19 +1,29 @@
+import { Dispatch, SetStateAction } from 'react';
 import './Modal.scss';
 
 interface Props {
 	id: string;
-	children: React.ReactNode;
 	modal: boolean;
+	setModal?: Dispatch<SetStateAction<boolean>>;
 }
 
-const Modal = ({ id, modal }: Props): JSX.Element => {
+const Modal = ({ id, modal, setModal }: Props): JSX.Element => {
+	const handlePortal = () => {
+		setModal!(!modal);
+	};
+
 	return (
-		<div id={id} className="portal">
-			<div className="modal">
-				<p className="modal__title">Thinking with portals</p>
-				<button>Hola</button>
-			</div>
-		</div>
+		<>
+			{modal && (
+				<>
+					<div id={id} className="portal" onClick={handlePortal}></div>
+					<section className="modal">
+						<p className="modal__title">Thinking with portals</p>
+						<button>Hola</button>
+					</section>
+				</>
+			)}
+		</>
 	);
 };
 
