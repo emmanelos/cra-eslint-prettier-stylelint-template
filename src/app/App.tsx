@@ -1,5 +1,5 @@
 import './App.scss';
-import LayoutContainer from './templates/layout/LayoutContainer';
+import LayoutContainer from './components/templates/layout/LayoutContainer';
 
 const App = () => {
 	return <LayoutContainer />;

@@ -1,11 +1,11 @@
 import './Layout.scss';
 import HeaderContainer from '../../organisms/header/HeaderContainer';
-import Pages from '../../pages/Pages';
+import Pages from '../../../pages/Pages';
 import FooterContainer from '../../organisms/footer/FooterContainer';
 
 const Layout = () => {
 	return (
-		<div className="layout">
+		<div id="layout" className="layout">
 			<HeaderContainer />
 			<Pages />
 			<FooterContainer />
