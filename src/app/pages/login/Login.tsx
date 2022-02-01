@@ -1,16 +1,18 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import LoginProps from './LoginProps';
+import { Portal } from '../../context/Portal/Portal';
+import PortalContext from '../../context/Portal/PortalContext';
 import PortalContainer from '../../components/templates/portal/PortalContainer';
 
-const Login = (props: LoginProps) => {
-	const { portal, handlePortal } = props;
+const Login = () => {
+	const { portal, togglePortal } = useContext<Portal>(PortalContext);
 
 	return (
 		<section className="login page">
 			<Link to="/home">Home</Link>
-			<button onClick={handlePortal}>Open modal</button>
+			<button onClick={togglePortal}>Open modal</button>
 
-			{portal && <PortalContainer id="portal" handlePortal={handlePortal} />}
+			{portal && <PortalContainer />}
 		</section>
 	);
 };
