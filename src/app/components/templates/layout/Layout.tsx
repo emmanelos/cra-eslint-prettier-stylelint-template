@@ -1,13 +1,15 @@
 import './Layout.scss';
 import HeaderContainer from '../../organisms/header/HeaderContainer';
-import Pages from '../../pages/Pages';
 import FooterContainer from '../../organisms/footer/FooterContainer';
+import { LayoutProps } from './LayoutContainer';
 
-const Layout = () => {
+const Layout = (props: LayoutProps): JSX.Element => {
+	const { children } = props;
+
 	return (
 		<div className="layout">
 			<HeaderContainer />
-			<Pages />
+			{children}
 			<FooterContainer />
 		</div>
 	);

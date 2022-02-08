@@ -1,8 +1,13 @@
 import './App.scss';
-import LayoutContainer from './templates/layout/LayoutContainer';
+import PortalState from './context/Portal/PortalState';
+import Pages from './pages/Pages';
 
 const App = () => {
-	return <LayoutContainer />;
+	return (
+		<PortalState>
+			<Pages />
+		</PortalState>
+	);
 };
 
 export default App;

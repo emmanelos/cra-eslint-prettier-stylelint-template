@@ -1,7 +1,7 @@
 import Modal from './Modal';
 
 const ModalContainer = () => {
-	return <Modal id={''} children={undefined} />;
+	return <Modal />;
 };
 
 export default ModalContainer;

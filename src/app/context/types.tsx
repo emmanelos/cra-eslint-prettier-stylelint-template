@@ -1,0 +1,1 @@
+export const TOGGLE_PORTAL = 'TOGGLE_PORTAL';

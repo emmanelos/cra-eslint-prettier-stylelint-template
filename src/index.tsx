@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import LoaderContainer from './app/atoms/loader/LoaderContainer';
+import LoaderContainer from './app/components/atoms/loader/LoaderContainer';
 
 const App = lazy(() => import('./app/App'));
 
