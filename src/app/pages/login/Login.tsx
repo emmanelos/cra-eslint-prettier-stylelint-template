@@ -8,7 +8,7 @@ const Login = () => {
 	const { portal, togglePortal } = useContext<Portal>(PortalContext);
 
 	return (
-		<section className="login page">
+		<section className="content login">
 			<Link to="/home">Home</Link>
 			<button onClick={togglePortal}>Open modal</button>
 

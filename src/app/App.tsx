@@ -1,11 +1,11 @@
 import './App.scss';
-import LayoutContainer from './components/templates/layout/LayoutContainer';
 import PortalState from './context/Portal/PortalState';
+import Pages from './pages/Pages';
 
 const App = () => {
 	return (
 		<PortalState>
-			<LayoutContainer />
+			<Pages />
 		</PortalState>
 	);
 };
