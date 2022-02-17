@@ -6,6 +6,4 @@ interface PortalInitialState {
 	togglePortal: () => void;
 }
 
-const PortalContext = createContext<PortalInitialState>(null!);
-
-export default PortalContext;
+export const PortalContext = createContext<PortalInitialState>(null!);

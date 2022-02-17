@@ -1,7 +1,5 @@
 import Modal from './Modal';
 
-const ModalContainer = () => {
+export const ModalContainer = () => {
 	return <Modal />;
 };
-
-export default ModalContainer;

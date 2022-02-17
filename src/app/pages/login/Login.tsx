@@ -1,11 +1,8 @@
-import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Portal } from '../../context/Portal/Portal';
-import PortalContext from '../../context/Portal/PortalContext';
-import PortalContainer from '../../components/templates/portal/PortalContainer';
+import { LoginProps } from './LoginProps';
 
-const Login = () => {
-	const { portal, togglePortal } = useContext<Portal>(PortalContext);
+export const Login = (props: LoginProps) => {
+	const { portal, togglePortal, PortalContainer } = props;
 
 	return (
 		<section className="content login">
@@ -16,5 +13,3 @@ const Login = () => {
 		</section>
 	);
 };
-
-export default Login;

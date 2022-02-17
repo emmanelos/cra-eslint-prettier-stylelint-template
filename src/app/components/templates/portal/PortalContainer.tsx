@@ -1,8 +1,14 @@
+import { useContext } from 'react';
 import { createPortal } from 'react-dom';
-import Portal from './Portal';
+import { Portal as Context } from '../../../context/Portal/Portal';
+import { PortalContext } from '../../../context/Portal/PortalContext';
+import { Portal } from './Portal';
 
-const ModalContainer = (): JSX.Element => {
-	return createPortal(<Portal />, document.body);
+export const PortalContainer = (): JSX.Element => {
+	const { id, togglePortal } = useContext<Context>(PortalContext);
+
+	return createPortal(
+		<Portal id={id} togglePortal={togglePortal} />,
+		document.body,
+	);
 };
-
-export default ModalContainer;

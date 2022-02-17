@@ -1,6 +1,4 @@
-interface PortalProps {
+export interface PortalProps {
 	id: string;
-	handlePortal: () => void;
+	togglePortal: () => void;
 }
-
-export default PortalProps;

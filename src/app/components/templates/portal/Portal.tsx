@@ -1,11 +1,9 @@
-import { useContext } from 'react';
 import './Portal.scss';
-import { Portal } from '../../../context/Portal/Portal';
-import PortalContext from '../../../context/Portal/PortalContext';
-import ModalContainer from '../../organisms/modal/ModalContainer';
+import { PortalProps } from './PortalProps';
+import { ModalContainer } from '../../organisms/modal/ModalContainer';
 
-const Modal = (): JSX.Element => {
-	const { id, togglePortal } = useContext<Portal>(PortalContext);
+export const Portal = (props: PortalProps): JSX.Element => {
+	const { id, togglePortal } = props;
 
 	return (
 		<div id={id} className="portal">
@@ -14,5 +12,3 @@ const Modal = (): JSX.Element => {
 		</div>
 	);
 };
-
-export default Modal;

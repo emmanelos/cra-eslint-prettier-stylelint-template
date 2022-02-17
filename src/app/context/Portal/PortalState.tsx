@@ -1,7 +1,7 @@
 import { Reducer, useReducer } from 'react';
 import { PortalInitialState, PortalAction, PortalStateProps } from './Portal';
-import PortalReducer from './PortalReducer';
-import PortalContext from './PortalContext';
+import { PortalReducer } from './PortalReducer';
+import { PortalContext } from './PortalContext';
 
 const PortalState = (props: PortalStateProps): JSX.Element => {
 	const { children } = props;
